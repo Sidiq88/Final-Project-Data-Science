@@ -4,15 +4,13 @@ import numpy as np
 import pandas as pd
 
 # Load model dan tools
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-model = joblib.load(os.path.join(BASE_DIR, "svm_model.pkl"))
-scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
-ohe = joblib.load(os.path.join(BASE_DIR, "ohe.pkl"))
-mean_map_country = joblib.load(os.path.join(BASE_DIR, "mean_map_country.pkl"))
-mean_map_products = joblib.load(os.path.join(BASE_DIR, "mean_map_products.pkl"))
-global_mean_country = joblib.load(os.path.join(BASE_DIR, "global_mean_country.pkl"))
-global_mean_products = joblib.load(os.path.join(BASE_DIR, "global_mean_products.pkl"))
+model = joblib.load("svm_model.pkl")
+scaler = joblib.load("scaler.pkl")
+ohe = joblib.load("ohe.pkl")
+mean_map_country = joblib.load("mean_map_country.pkl")
+mean_map_products = joblib.load("mean_map_products.pkl")
+global_mean_country = joblib.load("global_mean_country.pkl")
+global_mean_products = joblib.load("global_mean_products.pkl")
 
 def predict_churn(input_data):
 
